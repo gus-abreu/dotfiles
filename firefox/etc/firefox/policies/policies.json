@@ -1,5 +1,162 @@
 {
   "policies": {
+    "DisableTelemetry": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DisableFormHistory": true,
+    "DisableFeedbackCommands": true,
+    "CaptivePortal": false,
+    "PasswordManagerEnabled": false,
+    "OfferToSaveLogins": false,
+    "AutofillAddressEnabled": false,
+    "AutofillCreditCardEnabled": false,
+    "EnableTrackingProtection": {
+      "Value": true,
+      "Locked": false,
+      "Cryptomining": true,
+      "Fingerprinting": true,
+      "EmailTracking": true
+    },
+    "Cookies": {
+      "Behavior": "reject-tracker-and-partition-foreign",
+      "BehaviorPrivateBrowsing": "reject-tracker-and-partition-foreign",
+      "Locked": false
+    },
+    "DNSOverHTTPS": {
+      "Enabled": true,
+      "Locked": false
+    },
+    "HttpsOnlyMode": "enabled",
+    "NetworkPrediction": false,
+    "SanitizeOnShutdown": {
+      "Cache": true,
+      "FormData": true,
+      "Downloads": true,
+      "OfflineApps": true,
+      "Sessions": false,
+      "Cookies": false,
+      "History": false,
+      "SiteSettings": false,
+      "Locked": false
+    },
+    "RequestedLocales": [
+      "en-GB",
+      "pt-BR"
+    ],
+    "FirefoxHome": {
+      "Search": true,
+      "TopSites": false,
+      "SponsoredTopSites": false,
+      "Highlights": false,
+      "Pocket": false,
+      "SponsoredPocket": false,
+      "Snippets": false,
+      "Locked": false
+    },
+    "FirefoxSuggest": {
+      "WebSuggestions": false,
+      "SponsoredSuggestions": false,
+      "ImproveSuggest": false,
+      "Locked": false
+    },
+    "NewTabPage": true,
+    "UserMessaging": {
+      "WhatsNew": false,
+      "ExtensionRecommendations": false,
+      "FeatureRecommendations": false,
+      "UrlbarInterventions": false,
+      "SkipOnboarding": true,
+      "MoreFromMozilla": false,
+      "Locked": false
+    },
+    "NoDefaultBookmarks": true,
+    "DontCheckDefaultBrowser": true,
+    "SearchSuggestEnabled": false,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "",
+    "TranslateEnabled": true,
+    "Preferences": {
+      "intl.accept_languages": {
+        "Value": "en-GB,en,pt-BR,pt",
+        "Status": "default"
+      },
+      "spellchecker.dictionary": {
+        "Value": "en-GB,pt-BR",
+        "Status": "default"
+      },
+      "layout.spellcheckDefault": {
+        "Value": 2,
+        "Status": "default"
+      },
+      "geo.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.peerconnection.enabled": {
+        "Value": false,
+        "Status": "default"
+      },
+      "privacy.resistFingerprinting": {
+        "Value": true,
+        "Status": "default"
+      },
+      "privacy.trackingprotection.socialtracking.enabled": {
+        "Value": true,
+        "Status": "default"
+      },
+      "dom.security.https_only_mode": {
+        "Value": true,
+        "Status": "default"
+      },
+      "browser.send_pings": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "beacon.enabled": {
+        "Value": false,
+        "Status": "default"
+      },
+      "browser.urlbar.speculativeConnect.enabled": {
+        "Value": false,
+        "Status": "default"
+      },
+      "network.prefetch-next": {
+        "Value": false,
+        "Status": "default"
+      },
+      "network.dns.disablePrefetch": {
+        "Value": true,
+        "Status": "default"
+      },
+      "network.http.speculative-parallel-limit": {
+        "Value": 0,
+        "Status": "default"
+      }
+    },
+    "3rdparty": {
+      "Extensions": {
+        "uBlock0@raymondhill.net": {
+          "adminSettings": {
+            "selectedFilterLists": [
+              "user-filters",
+              "ublock-filters",
+              "ublock-badware",
+              "ublock-privacy",
+              "ublock-quick-fixes",
+              "ublock-unbreak",
+              "easylist",
+              "easyprivacy",
+              "urlhaus-1",
+              "plowe-0",
+              "adguard-url-tracking-protection",
+              "adguard-cookies",
+              "adguard-annoyances",
+              "ublock-annoyances"
+            ]
+          }
+        }
+      }
+    },
     "ExtensionSettings": {
       "*": {
         "blocked_install_message": "Extensions are managed by policy"
@@ -7,6 +164,22 @@
       "{446900e4-71c2-419f-a6a7-df9c091e268b}": {
         "installation_mode": "force_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi"
+      },
+      "uBlock0@raymondhill.net": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
+      },
+      "@testpilot-containers": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi"
+      },
+      "en-GB@dictionaries.addons.mozilla.org": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/british-english-dictionary-2/latest.xpi"
+      },
+      "pt-BR@dictionaries.addons.mozilla.org": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/verificador-ortografico-para/latest.xpi"
       }
     }
   }
